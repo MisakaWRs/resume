@@ -1,0 +1,100 @@
+/* 通用样式重置 */
+* {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    /* 设置容器宽度为80% */
+    margin: 0 auto;
+    /* 设置容器居中 */
+}
+
+/* 限制导航栏内间距为0，防止导航栏文字错位 */
+.container ul {
+    padding: 0;
+}
+
+.container-flex {
+    display: flex;
+    /* 设置容器为flex布局 */
+    justify-content: space-between;
+    /* 设置子元素水平间距为头尾平均分布 */
+    flex-shrink: 0;
+}
+
+/* 导航栏列表项 */
+.nav li {
+    display: inline-block;
+    /* 设置导航栏列表项为行内块元素 */
+    list-style: none;
+    /* 取消列表项前面的默认样式 */
+    height: 60px;
+    /* 设置列表项高度为60px */
+    line-height: 60px;
+    /* 设置列表项中的文本垂直居中 */
+    padding: 0 40px;
+    /* 设置导航栏内间距为上下0，左右40px */
+}
+
+/* 导航栏链接样式 */
+.nav-link {
+    color: #ffffff;
+    /* 设置链接颜色为白色 */
+    text-decoration: none;
+    /* 去掉链接下划线 */
+}
+
+/* 网站标题样式 */
+.site-title {
+    font-weight: bold;
+    /* 设置文字加粗 */
+    font-size: 30px;
+    /* 设置文字大小为30px */
+}
+
+.objection {
+    font-weight: bold;
+}
+
+/* 导航栏样式 */
+.nav {
+    background: #00d0fe;
+    /* 设置导航栏背景色为浅蓝色 */
+    height: 60px;
+    /* 设置导航栏高度为60px */
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏列表项悬停效果 */
+.nav li:hover {
+    background-color: rgb(255, 255, 255);
+    /* 设置悬停背景色为白色 */
+}
+
+/* 导航栏链接悬停效果 */
+.nav-link:hover {
+    color: #DE3712;
+    /* 设置链接悬停时颜色为红色 */
+}
+
+/* 当屏幕宽度小于或等于768px时，应用以下样式 */
+@media (max-width: 768px) {
+    .nav ul:last-child {
+        display: none;
+        /* 隐藏导航栏最后一个ul元素 */
+    }
+
+    .container-flex ul:first-child {
+        flex-grow: 1;
+        /* 伸展剩余空间 */
+        text-align: center;
+        /* 文本居中 */
+    }
+
+    .bq {
+        width: 100%;
+        /* 设置宽度为100% */
+    }
+}
